@@ -11,12 +11,12 @@ class Main {
     }
     sc.close();//close scanner object
     
-    for (int i = a.length-1; i>0; i--){
-      for (int j=0; j<i; j++){
-        if (a[j].length()>a[j+1].length()){
+    for (int i = a.length-1; i>0; i--){ //outer-back to front (stops inner loop from unnecesarily looping to end everytime)
+      for (int j=0; j<i; j++){ //inner loop does the swapping
+        if (a[j].length()>a[j+1].length()){ //calls swap if wrong order by size
           swap(j, j+1, a);
         }
-        if (a[j].length() == a[j+1].length()){
+        if (a[j].length() == a[j+1].length()){ // calls method if wrong order alphabetically
           alpha(j, j+1, a);
         }
       }
