@@ -21,7 +21,7 @@ class Main {
         }
       }
     }
-    System.out.println(a[answer]); //prints output as string
+    System.out.println(a[answer-1]); //prints output as string if answer is 3 it's element in third place
   }
   public static void swap(int left, int right, String[] a){ // swaps elements in space left & right
     String temp = a[left];
